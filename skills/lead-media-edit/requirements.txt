@@ -1,0 +1,7 @@
+# Install FFmpeg / ffprobe separately and ensure they are on PATH.
+openai-whisper
+numpy
+jieba
+fonttools
+opencv-python-headless<5
+PyYAML

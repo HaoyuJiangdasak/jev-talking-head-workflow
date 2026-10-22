@@ -1,0 +1,45 @@
+# Secrets and local configuration
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+.claude/settings.json
+.codex/settings.json
+
+# Python and local caches
+__pycache__/
+*.py[cod]
+.jev-cache/
+.pytest_cache/
+.mypy_cache/
+
+# Local project output and user media
+剪辑成果/
+口播文案输出/
+工作素材/
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.m4a
+*.srt
+*.ass
+*.webm
+
+# Local build output
+node_modules/
+.code/
+bundle/
+dist/
+build/
+coverage/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

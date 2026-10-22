@@ -1,0 +1,33 @@
+[
+  {
+    "id": "opening-title",
+    "start": 0.35,
+    "duration": 3.6,
+    "kind": "title",
+    "side": "top-left",
+    "title": "逐字稿工作流",
+    "body": "把表达变成自己的内容",
+    "accent": "amber"
+  },
+  {
+    "id": "opening-metric",
+    "start": 3.8,
+    "duration": 3.1,
+    "kind": "metric",
+    "side": "right",
+    "title": "账号增长",
+    "value": "2万 → 20万",
+    "body": "工作流带来的结果",
+    "accent": "teal"
+  },
+  {
+    "id": "workflow-steps",
+    "start": 6.9,
+    "duration": 3.0,
+    "kind": "steps",
+    "side": "left",
+    "title": "三个关键动作",
+    "items": ["选题", "学习领会", "清理优化"],
+    "accent": "coral"
+  }
+]
