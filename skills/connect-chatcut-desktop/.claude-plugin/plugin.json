@@ -1,0 +1,10 @@
+{
+  "name": "connect-chatcut-desktop",
+  "version": "1.0.4",
+  "description": "Install and connect the signed official ChatCut Desktop app when its local MCP tools are unavailable.",
+  "author": {
+    "name": "ChatCut"
+  },
+  "repository": "https://github.com/ChatCut-Inc/agent-plugin.git",
+  "license": "GPL-3.0-only"
+}

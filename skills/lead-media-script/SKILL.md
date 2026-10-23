@@ -81,7 +81,7 @@ metadata:
 建议把输入保存为 `工作素材/jev_script_candidates.json`，运行：
 
 ```powershell
-$jevPy = 'python'
+$jevPy = '<path-to-lead-media-python>'
 $env:PYTHONIOENCODING = 'utf-8'
 $jevSkill = Join-Path $env:USERPROFILE '.codex\skills\jev-video-review'
 & $jevPy (Join-Path $jevSkill 'scripts\jev_video_review.py') `

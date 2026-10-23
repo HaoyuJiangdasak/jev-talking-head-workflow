@@ -9,7 +9,7 @@ metadata:
 
 # Lead-自媒体口播剪辑
 
-目标：用户给一段自己录好的口播视频（可附口播文案），交付一条**可以直接发布**的成片，而不是剪辑建议。除了原有的圆环画中画，还支持 `stage` 居中人物动态舞台：人物保留在中央做口播与肢体动作，透明卡片、文字和图形围绕人物按字级时间同步出现。完整段落规划参考已安装的 `full-video-motion-workflow`，细节见 [居中人物动态舞台](references/居中人物动态舞台.md)。
+目标：用户给一段自己录好的口播视频（可附口播文案），交付一条**可以直接发布**的成片，而不是剪辑建议。除了原有的圆环画中画，还支持 `stage` 居中人物动态舞台：人物保留在中央做口播与肢体动作，透明卡片、文字和图形围绕人物按字级时间同步出现。完整段落规划参考已安装的 `full-video-motion-workflow`，细节见 [居中人物动态舞台](../../../skills/lead-media-edit/references/居中人物动态舞台.md)。
 
 成片 = 粗剪后的口播 + 代码生成的动态讲解画面（B-roll）+ 人物圆环画中画或居中人物动态舞台 + 音效 + 居中单行字幕。
 
@@ -32,7 +32,7 @@ metadata:
 
 ## 1. 第一步：粗剪
 
-详细判断标准见 [references/粗剪规则.md](references/粗剪规则.md)。流程：
+详细判断标准见 [references/粗剪规则.md](../../../skills/lead-media-edit/references/粗剪规则.md)。流程：
 
 ```bash
 ffmpeg -i 原片.MP4 -vn -ac 1 -ar 16000 audio16k.wav
@@ -58,7 +58,7 @@ python scripts/rough_cut.py 原片.MP4 edl.json 工作素材 --words transcript_
 
 ## 2. 第二步：B-roll 动态讲解画面
 
-设计规范、版式、运动语言、音效对照表见 [references/broll动效设计.md](references/broll动效设计.md)，开工前通读。要点：
+设计规范、版式、运动语言、音效对照表见 [references/broll动效设计.md](../../../skills/lead-media-edit/references/broll动效设计.md)，开工前通读。要点：
 
 1. **先做分镜表**（写进 `工作素材/分镜.md`）：逐句列出成片时间（取自 `transcript_rough.json` 的字时间）、这句要让观众“看懂什么”、画面方案、人物状态（全屏 / 圆环）、音效。没有解释作用的句子（态度、过渡、号召）让人物全屏。
 2. **人物状态**：讲解时人物缩成右下角圆环（`Presenter` 组件，圆形遮罩 + 缩放 + 位移同步插值，0.6s inOutQuint），不需要 B-roll 时全屏并缓慢推近。切换前后 0.05s 内配 whoosh。
@@ -92,7 +92,7 @@ python scripts/mix_audio.py --voice 工作素材/voice.wav --sfx-dir public/sfx 
 
 ## 3. 第三步：字幕
 
-完整规范见 [references/字幕规范.md](references/字幕规范.md)（沿用 video-rough-cut 的字幕样式：IBM Plex Sans SC SemiBold、192、白字深色细描边、31% 柔和阴影、底部整幅水平居中、任一时刻一行）。
+完整规范见 [references/字幕规范.md](../../../skills/lead-media-edit/references/字幕规范.md)（沿用 video-rough-cut 的字幕样式：IBM Plex Sans SC SemiBold、192、白字深色细描边、31% 柔和阴影、底部整幅水平居中、任一时刻一行）。
 
 1. 写 `subtitle_text.txt`：成片中**实际说出**的话，改正识别错字（同音字、专有名词、数字），数字用阿拉伯数字；可省略不影响意思的填充词，不改写观点。
 2. 写 `terms.txt`：不可拆开的词（专有名词、成语、数字+单位、固定搭配）。
@@ -116,7 +116,7 @@ python scripts/qa_check.py --video 剪辑成果/<名称>_成片.mp4 --text 工�
 
 `qa_check.py` 的“疑似残留起句”要逐条精听：本 skill 测试时就在成片里发现过“俄罗斯（停顿）俄罗斯也一样”——3 个字的残留起句在原片长转写里被合并，只有成片复检才暴露。确认后改 `edl.json` 重新粗剪，并把之后的动效时间整体平移。
 
-按 [references/验收清单.md](references/验收清单.md) 逐项打勾，有问题回到对应步骤修复后**重新渲染**（不要在已烧字幕的成片上再叠字幕）。
+按 [references/验收清单.md](../../../skills/lead-media-edit/references/验收清单.md) 逐项打勾，有问题回到对应步骤修复后**重新渲染**（不要在已烧字幕的成片上再叠字幕）。
 
 ## 交付
 

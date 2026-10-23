@@ -93,7 +93,7 @@ metadata:
 如果项目启用了 Jev，先把粗剪后的 `transcript_rough.json` 按 5–15 秒语义段整理成 `工作素材/jev_motion_candidates.json`，再运行：
 
 ```powershell
-$jevPy = 'python'
+$jevPy = '<path-to-lead-media-python>'
 $env:PYTHONIOENCODING = 'utf-8'
 $jevSkill = Join-Path $env:USERPROFILE '.codex\skills\jev-video-review'
 & $jevPy (Join-Path $jevSkill 'scripts\jev_video_review.py') `

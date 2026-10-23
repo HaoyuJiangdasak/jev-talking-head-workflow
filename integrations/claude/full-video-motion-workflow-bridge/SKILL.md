@@ -7,9 +7,9 @@ metadata:
 
 # 全流程 AI 视频制作
 
-如果项目已经由 `lead-media-edit` 负责粗剪和字幕，读取 [lead-media-edit 适配](references/lead-media-edit-adapter.md)：用 `stage` 保持人物在中央并把透明动效放到人物周围，用 `pip` 承载需要大面积 B-roll 的段落。这样不重复生成字幕，也不破坏原有音频 QA 链。
+如果项目已经由 `lead-media-edit` 负责粗剪和字幕，读取 [lead-media-edit 适配](../../../skills/full-video-motion-workflow/references/lead-media-edit-adapter.md)：用 `stage` 保持人物在中央并把透明动效放到人物周围，用 `pip` 承载需要大面积 B-roll 的段落。这样不重复生成字幕，也不破坏原有音频 QA 链。
 
-用户给出“人物居中、周围弹卡片和动画”的参考片时，继续读取 [参考片匹配档案](references/reference-match-profile.md)，按语义节点规划 cue，不照搬原片品牌或素材。
+用户给出“人物居中、周围弹卡片和动画”的参考片时，继续读取 [参考片匹配档案](../../../skills/full-video-motion-workflow/references/reference-match-profile.md)，按语义节点规划 cue，不照搬原片品牌或素材。
 
 ## 目标
 
@@ -31,8 +31,8 @@ metadata:
 
 每次生成前先确定一种全片主风格，不要在同一条视频里无理由混用两套色板。调用时支持以下二选一：
 
-1. **小珊深海军蓝科技风**：适合工具、流程、数据和产品讲解。读取 [小珊视觉风格](references/xiaoshan-style.md)，除非用户明确选择奶油风，否则默认使用这一风格。
-2. **奶油拼贴风**：适合更温暖、生活化、轻量的中文口播和知识表达。读取 [奶油视觉风格](references/cream-style.md)。
+1. **小珊深海军蓝科技风**：适合工具、流程、数据和产品讲解。读取 [小珊视觉风格](../../../skills/full-video-motion-workflow/references/xiaoshan-style.md)，除非用户明确选择奶油风，否则默认使用这一风格。
+2. **奶油拼贴风**：适合更温暖、生活化、轻量的中文口播和知识表达。读取 [奶油视觉风格](../../../skills/full-video-motion-workflow/references/cream-style.md)。
 
 如果用户没有选择风格，先询问“这次用科技蓝还是奶油风？”；如果用户说“按默认”或没有时间等待确认，使用科技蓝。选定后整条视频沿用该风格的色板、卡片、字体和动效节奏。
 
@@ -58,7 +58,7 @@ metadata:
 - 使用 14–18px 圆角、细深咖啡描边和轻纸张阴影；避免深蓝、纯黑大底、厚重黑盒和霓虹渐变。
 - 默认左侧放一个大关键词，右侧放 2–3 个小卡片/标签；人物区域保持干净，不遮挡脸、嘴、字幕和主要动作。
 - 标题轻微滑入，卡片以 0.12–0.20 秒错峰下落或侧向弹出，形成轻手工拼贴感；不要使用扫描线、强闪白或夸张弹跳。
-- 叠加素材必须是真透明格式；具体色板、版式、文案拆分和节奏读取 [奶油视觉风格](references/cream-style.md)。
+- 叠加素材必须是真透明格式；具体色板、版式、文案拆分和节奏读取 [奶油视觉风格](../../../skills/full-video-motion-workflow/references/cream-style.md)。
 
 ## 完整执行顺序
 
@@ -90,7 +90,7 @@ metadata:
 
 连续几句可以合成一个视觉段落；一句话也可以拆成多个镜头。每个视觉段落至少有一个有意义的运动变化，但不要把每个小元素都做成独立闪烁。
 
-把分镜保存为 `scene-plan.json`，同时生成一份人类可读的 `STORYBOARD.md`。推荐字段和示例见 [分镜模板](references/scene-plan-template.md)。
+把分镜保存为 `scene-plan.json`，同时生成一份人类可读的 `STORYBOARD.md`。推荐字段和示例见 [分镜模板](../../../skills/full-video-motion-workflow/references/scene-plan-template.md)。
 
 ### 3. 先制作独立动态素材
 
@@ -133,7 +133,7 @@ metadata:
 
 ### 5. 导入和组装 ChatCut
 
-按 [ChatCut 组装清单](references/chatcut-runbook.md) 执行：
+按 [ChatCut 组装清单](../../../skills/full-video-motion-workflow/references/chatcut-runbook.md) 执行：
 
 - 主人物口播放在主视频轨。
 - 全屏 B-roll 放在替换画面轨。

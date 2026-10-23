@@ -1,0 +1,6 @@
+interface:
+  display_name: "Center Stage Talking Head"
+  short_description: "让中央口播人物与语义卡片和动画同步出现"
+  default_prompt: "使用 $center-stage-talking-head，让人物保持在中央并让卡片、截图、数字和指向动画按口播同步出现。"
+policy:
+  allow_implicit_invocation: true

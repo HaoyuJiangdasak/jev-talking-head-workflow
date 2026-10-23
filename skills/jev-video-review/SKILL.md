@@ -44,7 +44,7 @@ Jev 不直接执行切片、改字幕或生成事实画面。任何 `best_take`�
 脚本入口：
 
 ```powershell
-$jevPy = 'python'
+$jevPy = '<path-to-lead-media-python>'
 $env:PYTHONIOENCODING = 'utf-8'
 & $jevPy scripts/jev_video_review.py `
   --stage take `

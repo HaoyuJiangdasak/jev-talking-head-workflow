@@ -1,0 +1,16 @@
+{
+  "name": "center-stage-talking-head",
+  "version": "1.0.0",
+  "description": "Keep a talking-head presenter centered while synchronizing semantic cards, UI, metrics, steps and callouts around the person.",
+  "author": {
+    "name": "Local shared skill"
+  },
+  "license": "MIT",
+  "keywords": [
+    "talking-head",
+    "remotion",
+    "hyperframes",
+    "motion-graphics",
+    "captions"
+  ]
+}

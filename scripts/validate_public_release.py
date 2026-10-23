@@ -20,7 +20,7 @@ FORBIDDEN_PARTS = {"__pycache__", ".jev-cache", "node_modules", ".git"}
 
 def main() -> int:
     errors: list[str] = []
-    files = [p for p in ROOT.rglob("*") if p.is_file()]
+    files = [p for p in ROOT.rglob("*") if p.is_file() and ".git" not in p.parts]
     for path in files:
         rel = path.relative_to(ROOT)
         if any(part in FORBIDDEN_PARTS for part in rel.parts):
